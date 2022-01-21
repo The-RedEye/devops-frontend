@@ -1,9 +1,9 @@
 import React, {useState, useContext} from 'react';
-import EditModal from '../todoModal/EditModal';
+import EditModal from '../adminComponents/todoModal/EditModal'
 import Connection from '../../Connection'
 import dataContext from '../Context';
 import { Droppable, Draggable } from "react-beautiful-dnd";
-import '../todoModal/CSS/editModal.css'
+import '../adminComponents/todoModal/CSS/editModal.css'
 import Tilt from 'react-parallax-tilt';
 
 const TaskCard = ( {task} ) => {

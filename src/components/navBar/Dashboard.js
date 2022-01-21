@@ -3,8 +3,8 @@ import CreatingTasks from "../bodyComponents/CreatingTasks";
 import dataContext from "../Context";
 import TaskCard from "../bodyComponents/TaskCard";
 import TaskCardNone from "../bodyComponents/TaskCardNone";
-import "../todoModal/CSS/searchTasks.css";
-import "../todoModal/CSS/projectField.css";
+import '../adminComponents/todoModal/CSS/projectField.css'
+import '../adminComponents/todoModal/CSS/searchTasks.css'
 import { DragDropContext } from "react-beautiful-dnd";
 
 function Dashboard(props) {

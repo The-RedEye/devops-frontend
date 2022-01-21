@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import TodoForm from '../todoModal/TodoForm'
+import TodoForm from '../adminComponents/todoModal/TodoForm'
 import dataContext from '../Context';
 import { Axios } from 'axios';
 // const url = "http://localhost:4000/devops/"

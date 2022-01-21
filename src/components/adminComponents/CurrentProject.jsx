@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import dataContext from './Context';
+import dataContext from '../Context';
 import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './dashboard.css'

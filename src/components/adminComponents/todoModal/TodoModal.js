@@ -3,8 +3,8 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
-import Connection from "../../Connection";
-import dataContext from "../Context";
+import Connection from "../../../Connection";
+import dataContext from "../../Context";
 import './CSS/addTask.css'
 
 function TodoModal(props) {

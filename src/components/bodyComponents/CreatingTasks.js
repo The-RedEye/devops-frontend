@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import TodoForm from '../todoModal/TodoForm'
+import TodoForm from '../adminComponents/todoModal/TodoForm'
 import AddingTodo from '../bodyComponents/AddingTodo'
 
 function CreatingTasks() {

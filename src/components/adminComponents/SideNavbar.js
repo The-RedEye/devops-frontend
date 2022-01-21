@@ -17,12 +17,12 @@ import {
   BsFillArrowRightSquareFill,
 } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
-import "../App.css";
-import Today from "../components/navBar/Today";
-import Adding from "../components/todoModal/Adding";
-import Dashboard from "../components/navBar/Dashboard";
+import "../../App.css";
+import Today from "../navBar/Today";
+import Adding from "../adminComponents/todoModal/Adding";
+import Dashboard from "../navBar/Dashboard";
 import "./sideNav.css";
-import TodoModal from "./todoModal/TodoModal";
+import TodoModal from "../adminComponents/todoModal/TodoModal";
 import { AiOutlinePlus, AiOutlineMenu } from "react-icons/ai";
 
 function Navbar(props) {

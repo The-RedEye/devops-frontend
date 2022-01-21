@@ -1,11 +1,11 @@
 import React, {useState, useContext} from 'react';
-import dataContext from '../Context'
+import dataContext from '../../Context'
 import {BiDotsVerticalRounded} from 'react-icons/bi'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {FaRegFlag} from 'react-icons/fa'
-import CurrentProject from '../CurrentProject';
+import CurrentProject from '../CurrentProject.jsx';
 import axios from 'axios'
-import Connection from '../../Connection'
+import Connection from '../../../Connection'
 
 /*
 Bugs To Fix:

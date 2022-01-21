@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from 'axios'
 import Modal from "react-bootstrap/Modal";
-import Connection from '../../Connection'
+import Connection from '../../../Connection'
 import EditTaskProjectID from './EditTaskProjectID.jsx'
 import EditTaskStatus from './EditTaskStatus';
 import Completed from '../todoModal/Completed';
-import dataContext from '../Context';
+import dataContext from '../../Context';
 import './CSS/searchTasks.css'
 
 function EditModal(props) {
