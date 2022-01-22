@@ -6,6 +6,7 @@ import {useState, useEffect, useContext} from 'react'
 import Connection from './Connection'
 import axios from 'axios';
 import AdminPage from './components/adminComponents/AdminPage';
+import FeedbackForm from './components/FeedbackForm';
 
 function App() {
 
@@ -15,6 +16,7 @@ const [tasks, setTasks] = useState([])
 const [currentProject, setCurrentProject] = useState('')
 const [currentTask, setCurrentTask] = useState([])
 const [isAdmin, setIsAdmin] = useState(false)
+const [events, setEvents] = useState([])
 
 const url = Connection
 const datum = useContext(dataContext)
@@ -72,14 +74,17 @@ const datum = useContext(dataContext)
         tasks, setTasks, 
         currentProject, setCurrentProject, 
         currentTask, setCurrentTask,
-        isAdmin, setIsAdmin
+        isAdmin, setIsAdmin,
+        events, setEvents
         }}>
           
         {/* <Header /> */}
           
         <body className='main-body'>
-          <AdminPage />
-
+          {console.log("isAdmin:", datum.isAdmin)}
+          {isAdmin === false ?
+            ( <AdminPage /> ) : 
+            ( <FeedbackForm /> )}
           
         </body>
          

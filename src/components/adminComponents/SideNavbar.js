@@ -24,12 +24,14 @@ import Dashboard from "../navBar/Dashboard";
 import "./sideNav.css";
 import TodoModal from "../adminComponents/todoModal/TodoModal";
 import { AiOutlinePlus, AiOutlineMenu } from "react-icons/ai";
+import NewEventModal from "./newEventModal/NewEventModal";
 
 function Navbar(props) {
   // const [showLinks, setShowLinks] = useState(false);
   const [unclick, setUnclick] = useState("false");
   const [submenu, setSubmenu] = useState("false");
   const [modalShow, setModalShow] = React.useState(false);
+  const [newEventModalShow, setNewEventModalShow] = useState(false)
 
   const [inactive, setInactive] = useState(false);
 
@@ -132,9 +134,21 @@ function Navbar(props) {
                       <span className="taskName"> Add Task</span>
                   </li>}
 
+                  {inactive ? <li className="navsInactive" onClick={() => setNewEventModalShow(true)}>
+                      <AiOutlinePlus />
+                  </li> : <li className="navs" onClick={() => setNewEventModalShow(true)}>
+                      <AiOutlinePlus />
+                      <span className="taskName"> Add Event</span>
+                  </li>}
+
                   <TodoModal
                     show={modalShow}
                     onHide={() => setModalShow(false)}
+                  />
+
+                  <NewEventModal
+                    show={newEventModalShow}
+                    onHide={() => setNewEventModalShow(false)}
                   />
                 </ul>
               </div>

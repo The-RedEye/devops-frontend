@@ -1,11 +1,11 @@
 import React from 'react';
 
-const feedbackForm = () => {
+const FeedbackForm = () => {
     return (
         <div>
-            
+            <h2>FeedbackForm</h2>
         </div>
     );
 };
 
-export default feedbackForm;
+export default FeedbackForm;

@@ -9,7 +9,7 @@ import Settings from '../navBar/Settings'
 const AdminRouter = () => {
     return (
         <div>
-            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/today" component={Today} />
             <Route exact path="/upcoming" component={Upcoming} />
             <Route exact path="/settings" component={Settings} />

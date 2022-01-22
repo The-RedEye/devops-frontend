@@ -1,0 +1,41 @@
+.addingModals {
+    backdrop-filter: blur(3px);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.2); */
+    color: rgb(176, 108, 40);
+}
+
+.modal-background {
+    backdrop-filter: blur(5px);
+}
+
+.addingModalBody {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    /* background-color: black; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgb(192, 212, 238);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.addingModalHeader {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: rgb(241, 206, 160);
+    background-color: rgba(78, 123, 182, 0.918);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.addingModalFooter {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    background-color: rgb(202, 224, 252);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.addingButton {
+    
+}
