@@ -10,7 +10,7 @@ const CurrentProject = () => {
   
     function setCurrentProject(project) {
       datum.setCurrentProject(project)
-      console.log("currentProject:" , datum.currentProject)
+      // console.log("currentProject:" , datum.currentProject)
     }
   
   return (

@@ -3,8 +3,6 @@ import dataContext from './Context';
 
 const datum = useContext(dataContext)
 
-
-
 const Login = () => {
 
     function isAdmin(

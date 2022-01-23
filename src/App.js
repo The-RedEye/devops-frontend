@@ -7,6 +7,8 @@ import Connection from './Connection'
 import axios from 'axios';
 import AdminPage from './components/adminComponents/AdminPage';
 import FeedbackForm from './components/FeedbackForm';
+import AdminRouter from './components/adminComponents/AdminRouter';
+import Header from './components/adminComponents/Header';
 
 function App() {
 
@@ -15,6 +17,7 @@ const [projects, setProjects] = useState([])
 const [tasks, setTasks] = useState([])
 const [currentProject, setCurrentProject] = useState('')
 const [currentTask, setCurrentTask] = useState([])
+const [currentEvent, setCurrentEvent] = useState(null)
 const [isAdmin, setIsAdmin] = useState(false)
 const [events, setEvents] = useState([])
 
@@ -81,10 +84,12 @@ const datum = useContext(dataContext)
         {/* <Header /> */}
           
         <body className='main-body'>
+          <Header />
           {console.log("isAdmin:", datum.isAdmin)}
-          {isAdmin === false ?
+          {isAdmin === true ?
             ( <AdminPage /> ) : 
             ( <FeedbackForm /> )}
+          
           
         </body>
          

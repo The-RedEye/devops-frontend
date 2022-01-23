@@ -85,9 +85,9 @@ function Navbar(props) {
                     </a> */}
                   {/* isnt working not sure why */}
 
-                  {inactive ? <Link to="/" className="navsInactive">
+                  {inactive ? <Link to="/dashboard" className="navsInactive">
                     <MdOutlineSpaceDashboard />
-                  </Link> : <Link to="/" className="navs">
+                  </Link> : <Link to="/dashboard" className="navs">
                     <MdOutlineSpaceDashboard />
                     <span className="taskName"> Dashboard</span>
                   </Link>}

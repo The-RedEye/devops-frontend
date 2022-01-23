@@ -18,7 +18,7 @@ function NewEventModal(props) {
   const handleNewTaskSubmit = (e) => {
     e.preventDefault();
 
-    console.log("e.target.name.value", e.target.name.value);
+    console.log("e.target.name.value", e.target.name.value, "date:", selectedDate);
     console.log("e.target.description.value", e.target.description.value);
     console.log("currentProjectId", datum.currentProject._id);
 
@@ -28,12 +28,14 @@ function NewEventModal(props) {
       description: e.target.description.value,
       isDefault: e.target.isDefault.value,
     }
-  
 
     axios.post(`${url}event`, event)
     .then((res) => {
-      datum.setEvents([...datum.events, res.data])
+      datum.setEvents(
+        fetch(`${url}event`)
+      )
       console.log("new event", res.data);
+      console.log("all events", datum.events)
     });
     props.onHide()
   };

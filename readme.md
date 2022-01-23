@@ -1,3 +1,8 @@
+FeedbackForm -> like 33 -> can't filter or set to [0]. datum.currentEvent is undefined
+LoginModal -> datum is not defined?
+Backend -> can't filter and find true statements to turn to false
+
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

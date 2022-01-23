@@ -38,7 +38,7 @@ useEffect(() => {
       .then((res) => {
           
         const allTasks = []
-        console.log("Initial Task/ToDo Data fetch:", datum.tasks)
+        console.log("AdminPage Task/ToDo Data fetch:", datum.tasks)
         //map changes all unassigned tasks to the first project          
         res.map( (task) => {
           
@@ -53,17 +53,28 @@ useEffect(() => {
         } )
 
         // console.log("tasks populated in the useContext:", tasks)
-        
         datum.setTasks(allTasks)
         console.log("tasks in datum:", datum.tasks) 
+
+    
       })
       .catch(console.err);
+
+      //fetches events
+    fetch(`${url}event`)
+      .then((res) => res.json())
+      .then((res) => {datum.setEvents(res)
+      console.log("Admin Event Data fetch:", datum.events)
+      })
+      .catch(console.err);
+
+
   }, [datum.currentProject, datum.tasks])
 
 
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <SideNavbar />
             <AdminRouter />
         </div>
