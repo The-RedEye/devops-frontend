@@ -5,7 +5,6 @@ import dataContext from '../Context';
 
 const BarChart = ( {data}) => {
     const datum = useContext(dataContext)
-    console.log("dataset", data.datasets[0].data)
   
      return(
          <center>

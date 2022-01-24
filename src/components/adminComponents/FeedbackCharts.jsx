@@ -76,26 +76,26 @@ const FeedbackCharts = () => {
                 completeness[4]  += 1
 
             if (feedback.comprehension === 1)
-                completeness[0] += 1
+                comprehension[0] += 1
             if (feedback.comprehension === 2)
-                completeness[1]  += 1
+                comprehension[1]  += 1
             if (feedback.comprehension === 3)
-                completeness[2]  += 1
+                comprehension[2]  += 1
             if (feedback.comprehension === 4)
-                completeness[3]  += 1
+                comprehension[3]  += 1
             if (feedback.comprehension === 5)
-                completeness[4]  += 1
+                comprehension[4]  += 1
             
             if (feedback.engagement === 1)
-                completeness[0] += 1
+                engagement[0] += 1
             if (feedback.engagement === 2)
-                completeness[1]  += 1
+                engagement[1]  += 1
             if (feedback.engagement === 3)
-                completeness[2]  += 1
+                engagement[2]  += 1
             if (feedback.engagement === 4)
-                completeness[3]  += 1
+                engagement[3]  += 1
             if (feedback.engagement === 5)
-                completeness[4]  += 1
+                engagement[4]  += 1
         })
 
         data.datasets[0].data.push(relevancyC1)
@@ -112,6 +112,7 @@ const FeedbackCharts = () => {
         
          for(let i = 0; i<5; i++)
             data.datasets[3].data.push(engagement[i])
+        console.log(data.datasets)
         
         eventClicked= true
         return data
