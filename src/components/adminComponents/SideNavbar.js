@@ -120,6 +120,13 @@ function Navbar(props) {
                     <span className="taskName"> New Project</span>
                   </a>}
 
+                  {inactive ? <Link to="/feedbackCharts" className="navsInactive">
+                    <FaCheck />
+                  </Link> : <Link to="/feedbackCharts" className="navs">
+                    <FaCheck />
+                    <span className="taskName"> Feedback Charts</span>
+                  </Link>}
+
                   {inactive ? <Link to="/completed" className="navsInactive">
                     <FaCheck />
                   </Link> : <Link to="/completed" className="navs">

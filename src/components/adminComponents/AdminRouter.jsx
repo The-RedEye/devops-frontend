@@ -5,6 +5,7 @@ import Today from '../navBar/Today'
 import Upcoming from '../navBar/Upcoming'
 import Completed from '../navBar/Completed'
 import Settings from '../navBar/Settings'
+import FeedbackCharts from './FeedbackCharts';
 
 const AdminRouter = () => {
     return (
@@ -14,6 +15,7 @@ const AdminRouter = () => {
             <Route exact path="/upcoming" component={Upcoming} />
             <Route exact path="/settings" component={Settings} />
             <Route exact path="/completed" component={Completed} />
+            <Route exact path="/feedbackCharts" component={FeedbackCharts} />
         </div>
     );
 };
