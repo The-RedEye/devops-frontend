@@ -12,14 +12,14 @@ const Login = (props) => {
     const datum = useContext(dataContext)
 
     function hideModal(){
-        console.log("loginCheck", datum.loginCheck, "showLoginModal", props.setLoginModal, "IsAdmin?", datum.isAdmin)
-        datum.setloginCheck(true)
-        props.setShowLoginModal=false
-        console.log("loginCheck", datum.loginCheck, "showLoginModal", props.setLoginModal, "IsAdmin?", datum.isAdmin)
+        console.log("showLoginModal", props.showLoginModal, "IsAdmin?", props.isAdmin)
+        // datum.setloginCheck(true)
+        props.setShowLoginModal(false)
+        console.log("showLoginModal", props.showLoginModal, "IsAdmin?", props.isAdmin)
     }
 
     function isAdmin() {
-        props.setIsAdmin = true
+        props.setIsAdmin(true)
         console.log("IsAdmin?", props.isAdmin)
         hideModal()
     }
@@ -44,7 +44,7 @@ const Login = (props) => {
 
                  <div className="editModalFooter">
                  <button className="loginButton" onClick={isAdmin}> Yes, I'm an Admin </button>
-                 <button className="loginButton" onChick={hideModal}> No, I'm not an Admin </button>
+                 <button className="loginButton" onClick={hideModal}> No, I'm not an Admin </button>
                  </div> 
 
             </div>

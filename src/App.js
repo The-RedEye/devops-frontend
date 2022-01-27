@@ -25,15 +25,15 @@ const [currentEvent, setCurrentEvent] = useState(null)
 const [events, setEvents] = useState([])
 const [loginCheck, setLoginCheck] = useState(false)
 const [allFeedback, setAllFeedback] = useState([])
-// const [isAdmin, setIsAdmin] = useState(false)
+const [isAdmin, setIsAdmin] = useState(false)
 
 const url = Connection
 const datum = useContext(dataContext)
-// const [showLoginModal, setShowLoginModal] = useState(true)
+const [showLoginModal, setShowLoginModal] = useState(true)
 // let isAdmin=false
 
-let showLoginModal=true
-let isAdmin = false
+// let showLoginModal=true
+// let isAdmin = false
 
   return (
     <div className="App">
@@ -56,15 +56,17 @@ let isAdmin = false
         <body className='main-body'>
           <Header />
 
-          {/* {showLoginModal ===true && <LoginModal 
-          showLoginModal={showLoginModal}
-          isAdmin={isAdmin}
-          />} */}
+          {showLoginModal ===true && <LoginModal 
+            showLoginModal={showLoginModal} 
+            setShowLoginModal={setShowLoginModal}
+            isAdmin={isAdmin}
+            setIsAdmin={setIsAdmin}
+          />}
 
           
           {isAdmin === false ?
-            ( <AdminPage /> ) : 
-            ( <FeedbackForm /> )}
+            ( <FeedbackForm /> ) : 
+            ( <AdminPage /> )}
           
           
         </body>
