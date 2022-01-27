@@ -5,13 +5,11 @@ import {useState, useEffect, useContext} from 'react'
 
 import Connection from './Connection'
 import axios from 'axios';
-import AdminPage from './components/adminComponents/AdminPage';
-import FeedbackForm from './components/FeedbackForm';
 import AdminRouter from './components/adminComponents/AdminRouter';
-import Header from './components/adminComponents/Header';
 import LoginModal from './components/LoginModal'
 import'./components/adminComponents/todoModal/CSS/editModal.css'
 import Modal from "react-bootstrap/Modal";
+import Body from './components/Body';
 
 
 function App() {
@@ -30,10 +28,6 @@ const [isAdmin, setIsAdmin] = useState(false)
 const url = Connection
 const datum = useContext(dataContext)
 const [showLoginModal, setShowLoginModal] = useState(true)
-// let isAdmin=false
-
-// let showLoginModal=true
-// let isAdmin = false
 
   return (
     <div className="App">
@@ -46,30 +40,22 @@ const [showLoginModal, setShowLoginModal] = useState(true)
         loginCheck, setLoginCheck,
         currentEvent, setCurrentEvent,
         events, setEvents,
-        allFeedback, setAllFeedback
-        // isAdmin, setIsAdmin,
+        allFeedback, setAllFeedback,
+        isAdmin, setIsAdmin,
         // showLoginModal, setShowLoginModal,
         }}>
           
-        {/* <Header /> */}
-          
-        <body className='main-body'>
-          <Header />
-
           {showLoginModal ===true && <LoginModal 
             showLoginModal={showLoginModal} 
             setShowLoginModal={setShowLoginModal}
             isAdmin={isAdmin}
             setIsAdmin={setIsAdmin}
+            loginCheck={loginCheck}
+            setLoginCheck={setLoginCheck}
           />}
 
-          
-          {isAdmin === false ?
-            ( <FeedbackForm /> ) : 
-            ( <AdminPage /> )}
-          
-          
-        </body>
+          {loginCheck === true && <Body />}
+
          
       </dataContext.Provider>
     </div>
