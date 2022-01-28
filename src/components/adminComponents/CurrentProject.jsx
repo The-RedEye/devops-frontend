@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import dataContext from './Context';
+import dataContext from '../Context';
 import { Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './dashboard.css'
@@ -10,14 +10,14 @@ const CurrentProject = () => {
   
     function setCurrentProject(project) {
       datum.setCurrentProject(project)
-      console.log("currentProject:" , datum.currentProject)
+      // console.log("currentProject:" , datum.currentProject)
     }
   
   return (
     <>
     <div className="dashHeader">
-      <Dropdown>
-        <Dropdown.Toggle className='projectDropBtn' variant="" id="dropdown-basic">
+      <Dropdown className='dropdownMenu'>
+        <Dropdown.Toggle className='projectDropBtn' variant="" id="dropdown-basic" >
           Projects
         </Dropdown.Toggle>
 

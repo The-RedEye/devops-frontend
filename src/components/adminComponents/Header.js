@@ -3,7 +3,7 @@ import { BsBell, BsHouse, BsGear, BsFillPersonPlusFill} from 'react-icons/bs'
 import {Link, Router} from 'react-router-dom'
 import Adding from './todoModal/Adding'
 import {BiDotsVerticalRounded, BiComment} from 'react-icons/bi'
-import dataContext from './Context'
+import dataContext from '../Context'
 
 
 // import logo from '../logos/Dev.png'

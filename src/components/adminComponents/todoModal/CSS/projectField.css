@@ -1,0 +1,212 @@
+.projectForm {
+    display: inline-block;
+    padding: 10px 10px 10px 60px;
+    /* border: 1px solid #dadada; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 50px;
+    top: 40px;
+}
+
+.projectInputField {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 50px;
+    border: 1px solid #dadada;
+    position: relative;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.projectBtn {
+    position: absolute;
+    font-size: 10px;
+    right: 40px;
+    color: white;
+    bottom: 20px;
+    border: 1px solid #dadada;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(241, 206, 160);
+    border-radius: 5px;
+}
+
+.projectBtn:hover {
+    background-color: rgb(223, 191, 150);
+}
+
+.projectDropBtn {
+    position: relative;
+    right: 1200px;
+    top: 95px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1910px) and (min-width: 1600px) {
+    .projectDropBtn {
+    position: relative;
+    right: 1050px;
+    top: 95px;
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1620px) and (min-width: 1469px) {
+    .projectDropBtn {
+        position: relative;
+        right: 900px;
+        top: 95px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+}
+
+@media only screen and (max-width: 1470px) and (min-width: 1336px) {
+    .projectDropBtn {
+        position: relative;
+        right: 700px;
+        top: 95px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+}
+
+@media only screen and (max-width: 1355px) and (min-width: 1199px) {
+    .projectDropBtn {
+        position: relative;
+        right: 590px;
+        top: 95px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1099px) {
+    .projectDropBtn {
+        position: relative;
+        right: 400px;
+        top: 95px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+}
+
+@media only screen and (max-width: 1090px) and (min-width: 871px) {
+    .projectDropBtn {
+        position: relative;
+        right: 250px;
+        top: 95px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+}
+
+@media only screen and (max-width: 870px) and (min-width: 669px) {
+    .projectDropBtn {
+        position: relative;
+        right: -50px;
+        top: 165px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+
+    .projectForm {
+            right: 85px;
+            top: 40px;
+            padding: 10px 10px 10px 50px;
+        }
+}
+
+/* @media only screen and (max-width: 667px) and (min-width: 500px) { 
+    .projectDropBtn {
+        position: relative;
+        right: -50px;
+        top: 165px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+
+    .projectForm {
+            right: 90px;
+            top: 40px;
+            padding: 10px 10px 10px 50px;
+        }
+} */
+
+@media only screen and (max-width: 700px) and (min-width: 500px) {
+    .projectDropBtn {
+        position: relative;
+        right: -50px;
+        top: 165px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+
+    .projectForm {
+            right: 90px;
+            top: 40px;
+            padding: 10px 10px 10px 50px;
+        }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+    .projectDropBtn {
+        position: relative;
+        right: -130px;
+        top: 145px;
+        width: 100px;
+        height: 50px;
+        background-color: white;
+        border-radius: 10px;
+        }
+
+    .projectForm {
+            right: 10px;
+            top: 30px;
+            padding: 10px 10px 10px 50px;
+        }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+    .projectDropBtn {
+        position: relative;
+        right: -160px;
+        top: 145px;
+        width: 85px;
+        height: 40px;
+        font-size: 15px;
+        background-color: white;
+        border-radius: 10px;
+        }
+
+    .projectForm {
+            right: -10px;
+            top: 30px;
+            padding: 10px 10px 10px 50px;
+        }
+}

@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios'
-import dataContext from '../Context'
+import dataContext from '../../Context';
 import { Children } from 'react/cjs/react.production.min';
-import Connection from '../../Connection'
+import Connection from '../../../Connection'
 import 'pretty-checkbox';
 
 

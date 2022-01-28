@@ -1,46 +1,41 @@
-import React, { useContext } from "react";
+import React, { useContext , useState} from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
-import Connection from "../../Connection";
-import dataContext from "../Context";
+import Connection from "../../../Connection";
+import dataContext from "../../Context";
 import './CSS/addTask.css'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
-function TodoModal(props) {
+function NewEventModal(props) {
   const url = Connection;
 
   const datum = useContext(dataContext);
+  const [selectedDate, setSelectedDate] = useState(null)
 
   const handleNewTaskSubmit = (e) => {
     e.preventDefault();
 
+    console.log("e.target.name.value", e.target.name.value, "date:", selectedDate);
     console.log("e.target.description.value", e.target.description.value);
-    console.log("e.target.name.value", e.target.name.value);
     console.log("currentProjectId", datum.currentProject._id);
 
-    const task= {
-      projectID: datum.currentProject._id,
-    devs: [],
-    completed: false,
-    subtask: false,
-    subtaskArr: [],
-    masterTask: null,
-    name: e.target.name.value,
-    description: e.target.description.value,
-    dueDate: "",
-    status:"notStarted",
-    comments: [{
-      comment: "",
-      author:"invalidID",
-      targets:[]
-    }]
-  }
+    const event= {
+      name: e.target.name.value,
+      date: selectedDate,
+      description: e.target.description.value,
+      isDefault: e.target.isDefault.value,
+    }
 
-    axios.post(`${url}task`, task)
+    axios.post(`${url}event`, event)
     .then((res) => {
-      datum.setTasks([...datum.tasks, task])
-      console.log("new task", res.data);
+      datum.setEvents(
+        fetch(`${url}event`)
+      )
+      console.log("new event", res.data);
+      console.log("all events", datum.events)
     });
     props.onHide()
   };
@@ -56,7 +51,7 @@ function TodoModal(props) {
         centered
       >
         <Modal.Header className="addingModalHeader" closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">New Task</Modal.Title>
+          <Modal.Title id="contained-modal-title-vcenter">New Event</Modal.Title>
         </Modal.Header>
 
         <form className="addingModalBody" onSubmit={handleNewTaskSubmit}>
@@ -64,10 +59,13 @@ function TodoModal(props) {
             <input
               type="text"
               name="name"
-              placeholder="Task Name"
+              placeholder="Event Name"
               className="taskName"
             />
-
+            <div> Event Date: </div>
+            <DatePicker 
+              selected={selectedDate} 
+              onChange={ date => setSelectedDate(date) } />
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
@@ -79,10 +77,20 @@ function TodoModal(props) {
                 placeholder="Description"
                 rows={3}
               />
+            
+            <p>Make this event the default event?</p>
+            <input type='radio' id='yes' name='isDefault' value='true' checked />
+            <label for='yes'>Yes</label>
+
+            <input type='radio' id='no' name='isDefault' value='false' />
+            <label for='no'>No</label>
+
+
+
             </Form.Group>
           </Modal.Body>
 
-          <Button className="addingButton" type="submit" >Add task</Button>
+          <Button className="addingButton" type="submit" >Add Event</Button>
         </form>
 
         <Modal.Footer className="addingModalFooter">
@@ -93,4 +101,4 @@ function TodoModal(props) {
   );
 }
 
-export default TodoModal;
+export default NewEventModal;

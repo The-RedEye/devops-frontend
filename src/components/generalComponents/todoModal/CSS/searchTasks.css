@@ -1,0 +1,285 @@
+.taskForm {
+    display: inline-block;
+    padding: 10px 10px 10px 60px;
+    /* border: 1px solid #dadada; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 700px;
+    top: -100px;
+}
+
+.taskInputField {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 50px;
+    border: 1px solid #dadada;
+    position: relative;
+    border-radius: 10px;
+    /* right: 600px; */
+    /* top: -50px; */
+    transition: all 0.3s;
+}
+
+.taskInputField:hover {
+    padding: 12px 10px 10px 80px;
+            outline: 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #575756;
+            /* border-radius: 0; */
+            border-radius: 10px;
+            background-position: 100% center;
+}
+
+.taskBtn {
+    background-color: rgba(0 0 0 / 0);
+    position: relative;
+    font-size: 35px;
+    color:rgb(241, 206, 160);;
+    right: 40px;
+    bottom: 2px;
+}
+
+/* Search Tasks Media only and screen */
+
+@media only screen and (max-width: 1310px) and (min-width: 1030px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 300px;
+        transition: all 0.3s;
+    }
+}
+@media only screen and (max-width: 1610px) and (min-width: 1300px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 500px;
+        transition: all 0.3s;
+    }
+}
+
+@media only screen and (max-width: 1029px) and (min-width: 850px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 150px;
+        transition: all 0.3s;
+    } 
+}
+
+@media only screen and (max-width: 849px) and (min-width: 700px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 90px;
+        transition: all 0.3s;
+    } 
+}
+
+@media only screen and (max-width: 790px) and (min-width: 500px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 90px;
+        transition: all 0.3s;
+    }
+    .taskInputField {
+        width: 100%;
+        padding: 12px 30px;
+        transition: all 0.3s;
+    }
+    
+    .taskInputField:hover {
+        padding: 12px 30px;
+        border-bottom: 1px solid #575756;
+        border-radius: 10px;
+        background-position: 100% center;
+    }
+    .taskBtn {
+        background-color: rgba(0 0 0 / 0);
+        position: relative;
+        font-size: 30px;
+        right: 40px;
+        bottom: 2px;
+    }
+}
+
+@media only screen and (max-width: 640px) and (min-width: 610px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 100px;
+        transition: all 0.3s;
+    }
+    
+    .taskInputField {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 50px;
+        border: 1px solid #dadada;
+        position: relative;
+        border-radius: 10px;
+        /* right: 600px; */
+        /* top: -50px; */
+        transition: all 0.3s;
+    }
+    
+    .taskInputField:hover {
+        padding: 12px 50px;
+        outline: 0;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #575756;
+        /* border-radius: 0; */
+        border-radius: 10px;
+        background-position: 100% center;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 10px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 10px;
+        transition: all 0.3s;
+    }
+
+    .taskInputField {
+        width: 100%;
+        padding: 12px 30px;
+        transition: all 0.3s;
+    }
+    
+    .taskInputField:hover {
+        padding: 12px 30px;
+        border-bottom: 1px solid #575756;
+        border-radius: 10px;
+        background-position: 100% center;
+    }
+    .taskBtn {
+        background-color: rgba(0 0 0 / 0);
+        position: relative;
+        font-size: 30px;
+        right: 40px;
+        bottom: 2px;
+    }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+    .taskForm {
+        display: inline-block;
+        padding: 10px 10px 0px 60px;
+        /* border: 1px solid #dadada; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: -10px;
+        transition: all 0.3s;
+    }
+    
+    .taskInputField {
+        width: 100%;
+        padding: 12px 30px;
+        transition: all 0.3s;
+    }
+    
+    .taskInputField:hover {
+        padding: 12px 30px;
+        border-bottom: 1px solid #575756;
+        border-radius: 10px;
+        background-position: 100% center;
+    }
+    .taskBtn {
+        background-color: rgba(0 0 0 / 0);
+        position: relative;
+        font-size: 30px;
+        right: 40px;
+        bottom: 2px;
+    }
+}
+
+.buttonEditModal {
+    position: relative;
+   display: inline-block;
+   padding: 8px 20px;
+   margin-top: -10px;
+   margin-left: 50px;
+   margin-right: 20px;
+   right: 50px;
+   background: #fff;
+   color: #000;
+   border-radius: 20px;
+   text-decoration: none;
+   font-weight: 500;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttonCloseModal {
+    position: relative;
+   display: inline-block;
+   padding: 8px 20px;
+   margin-top: 15px;
+   margin-left: 50px;
+   margin-right: 20px;
+   right: 0px;
+   background: #fff;
+   color: #000;
+   border-radius: 20px;
+   text-decoration: none;
+   font-weight: 500;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttonEditModal:hover {
+    background: rgb(241, 206, 160);
+}
+
+.buttonCloseModal:hover {
+    background: rgb(241, 206, 160);
+}

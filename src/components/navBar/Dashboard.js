@@ -3,8 +3,8 @@ import CreatingTasks from "../bodyComponents/CreatingTasks";
 import dataContext from "../Context";
 import TaskCard from "../bodyComponents/TaskCard";
 import TaskCardNone from "../bodyComponents/TaskCardNone";
-import "../todoModal/CSS/searchTasks.css";
-import "../todoModal/CSS/projectField.css";
+import '../adminComponents/todoModal/CSS/projectField.css'
+import '../adminComponents/todoModal/CSS/searchTasks.css'
 import { DragDropContext } from "react-beautiful-dnd";
 
 function Dashboard(props) {
@@ -27,7 +27,6 @@ function Dashboard(props) {
 
   useEffect(() => {
     if (datum.tasks.length > 0) {
-      console.log("Current active project", datum.currentProject);
       let currentProjID = datum.currentProject._id; //replace with datum.currentProject when currentProject useStateworks
       const tempArr = datum.tasks.filter(
         (task) => task.projectID === currentProjID
