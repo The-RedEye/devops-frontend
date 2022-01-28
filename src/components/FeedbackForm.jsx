@@ -11,8 +11,7 @@ const FeedbackForm = () => {
 
     const datum = useContext(dataContext)
     const url = Connection
-    
-    
+
     const [formChosen, setFormChosen] = useState(false)
 
     useEffect( () => {
@@ -20,24 +19,16 @@ const FeedbackForm = () => {
             .then((res) => res.json())
             .then((res) => {datum.setEvents(res) })
             .then((res) => {
-                console.log("FeedbackForm Event Data check:", datum.events)
                 datum.setCurrentEvent(res[0])
-                console.log("currEvent:", datum.currentEvent)
-                
             })
             .catch(console.err);
 
     },[])
 
     
-
     return (
         <center>
             <div className="content">
-                
-               
-                
-                {console.log("events:", datum.events)}
 
                 {formChosen === false && 
                     <ChooseEvent 

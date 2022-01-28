@@ -17,7 +17,6 @@ function EditModal(props) {
   useEffect( () => {
     //sets local useState task as the task found in datum
     
-    console.log("EditModal Active Task:", datum.task)
   }, [])
     
   const handleDelete = e => {

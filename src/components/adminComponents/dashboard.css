@@ -11,6 +11,11 @@
     transition: all 0.3s;
 }
 
+.projectDropBtn{
+    background-color: white;
+    width: 150px;
+}
+
 /* Dashboard.js making the glass */
 
 .taskCards {

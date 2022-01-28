@@ -12,26 +12,19 @@ const FeedbackCharts = () => {
     let eventClicked = false
    
     function changeEvent(event){
-        console.log("changeEvent-FeedbackCharts")
         datum.setCurrentEvent(event)
         let filteredFeedback = filterFeedback(event._id)
         setData(buildCharts(filteredFeedback))
         datum.setComments(getComments(filteredFeedback))
-        console.log("filteredFeedback", filteredFeedback, "comments", datum.comments)
         datum.setChartData(data)
-        console.log("data for charts:", data, "event clicked", eventClicked)
-        console.log("datum chart data", datum.chartData)
     }
     
 
     function getComments(feedback){
         const resultComments = []
         feedback.map( (feedback) =>{
-            console.log("fb:", feedback, "fb.comment", feedback.comment)
             resultComments.push(feedback.comment)
         })
-        console.log("resultComment", resultComments)
-
 
         datum.setComments(resultComments)
         return resultComments
@@ -130,10 +123,8 @@ const FeedbackCharts = () => {
         
          for(let i = 0; i<5; i++)
             data.datasets[3].data.push(engagement[i])
-        console.log(data.datasets)
         
         datum.setChartData(data)
-        console.log("built data:", data, "datum chart data:", datum.chartData)
         eventClicked= true
         return data
     }
@@ -142,11 +133,6 @@ const FeedbackCharts = () => {
         fetch(`${url}event`)
             .then((res) => res.json())
             .then((res) => {datum.setEvents(res) })
-            .then((res) => {
-                console.log("FeedbackForm Event Data check:", datum.events)
-                console.log("currEvent:", datum.currentEvent)
-                
-            })
             .catch(console.err);
 
     },[])
@@ -167,8 +153,7 @@ const FeedbackCharts = () => {
 
     return (
         <center>
-
-            
+  
             <div className="content">
                 
                 <h2>Please choose Event</h2>
@@ -184,11 +169,7 @@ const FeedbackCharts = () => {
                 ( <NoChart />) :
                 ( <BarChart data={data} />)}
             </div>
-                    
-            
-
-            
-            
+   
         </center>
     );
 };

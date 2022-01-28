@@ -16,8 +16,8 @@ const CurrentProject = () => {
   return (
     <>
     <div className="dashHeader">
-      <Dropdown>
-        <Dropdown.Toggle className='projectDropBtn' variant="" id="dropdown-basic">
+      <Dropdown className='dropdownMenu'>
+        <Dropdown.Toggle className='projectDropBtn' variant="" id="dropdown-basic" >
           Projects
         </Dropdown.Toggle>
 

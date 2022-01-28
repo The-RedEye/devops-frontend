@@ -27,7 +27,6 @@ function Dashboard(props) {
 
   useEffect(() => {
     if (datum.tasks.length > 0) {
-      console.log("Current active project", datum.currentProject);
       let currentProjID = datum.currentProject._id; //replace with datum.currentProject when currentProject useStateworks
       const tempArr = datum.tasks.filter(
         (task) => task.projectID === currentProjID

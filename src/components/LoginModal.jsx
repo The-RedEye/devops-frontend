@@ -12,18 +12,15 @@ const Login = (props) => {
     const datum = useContext(dataContext)
 
     function hideModal(){
-        console.log("showLoginModal", props.showLoginModal, "IsAdmin?", props.isAdmin)
         // datum.setloginCheck(true)
         props.setShowLoginModal(false)
         props.setLoginCheck(true)
         datum.setLoginCheck(true)
-        console.log("showLoginModal", props.showLoginModal, "IsAdmin?", props.isAdmin)
     }
 
     function isAdmin() {
         props.setIsAdmin(true)
         datum.setIsAdmin(true)
-        console.log("IsAdmin?", props.isAdmin)
         hideModal()
     }
 
