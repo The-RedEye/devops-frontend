@@ -15,10 +15,6 @@ function TodoModal(props) {
   const handleNewTaskSubmit = (e) => {
     e.preventDefault();
 
-    console.log("e.target.description.value", e.target.description.value);
-    console.log("e.target.name.value", e.target.name.value);
-    console.log("currentProjectId", datum.currentProject._id);
-
     const task= {
       projectID: datum.currentProject._id,
     devs: [],

@@ -4,19 +4,37 @@ import dataContext from '../Context';
 import BarChart from './BarChart';
 import NoChart from './NoChart';
 
-
 const FeedbackCharts = () => {
     const datum = useContext(dataContext)
     const url = Connection
-    let [data, setData] = useState({})
+    const [data, setData] = useState({})
+    
     let eventClicked = false
    
-
     function changeEvent(event){
+        console.log("changeEvent-FeedbackCharts")
         datum.setCurrentEvent(event)
         let filteredFeedback = filterFeedback(event._id)
         setData(buildCharts(filteredFeedback))
-        console.log("data for charts:", data, eventClicked)
+        datum.setComments(getComments(filteredFeedback))
+        console.log("filteredFeedback", filteredFeedback, "comments", datum.comments)
+        datum.setChartData(data)
+        console.log("data for charts:", data, "event clicked", eventClicked)
+        console.log("datum chart data", datum.chartData)
+    }
+    
+
+    function getComments(feedback){
+        const resultComments = []
+        feedback.map( (feedback) =>{
+            console.log("fb:", feedback, "fb.comment", feedback.comment)
+            resultComments.push(feedback.comment)
+        })
+        console.log("resultComment", resultComments)
+
+
+        datum.setComments(resultComments)
+        return resultComments
     }
 
     function buildCharts(feedback){
@@ -114,6 +132,8 @@ const FeedbackCharts = () => {
             data.datasets[3].data.push(engagement[i])
         console.log(data.datasets)
         
+        datum.setChartData(data)
+        console.log("built data:", data, "datum chart data:", datum.chartData)
         eventClicked= true
         return data
     }
@@ -141,8 +161,6 @@ const FeedbackCharts = () => {
         
         let filteredFeedback = datum.allFeedback.filter( (feedback) => feedback.eventID === eventID)
         
-        console.log("all feedback", datum.allFeedback,
-            "filtered feedback:", filteredFeedback,)
         return filteredFeedback
     }
 
@@ -152,23 +170,22 @@ const FeedbackCharts = () => {
 
             
             <div className="content">
-                <h1> ------ </h1>
-                <h1> ------ </h1>
-                <h2>Please choose Event to give feedback</h2>
                 
-                {console.log("events:", datum.events)}
-
+                <h2>Please choose Event</h2>
+                
                 {datum.events.map((event) => {
-                   return <p><button type="button" value={event._id}
+                   return <p><button type="button" className='eventButton' value={event._id}
                     onClick={() => changeEvent(event)}>
                     {event.name}
                     </button></p>}
                     )}
+
+                {datum.currentEvent === null ?
+                ( <NoChart />) :
+                ( <BarChart data={data} />)}
             </div>
                     
-            {datum.currentEvent === null ?
-                ( <NoChart />) :
-                ( <BarChart data={data}/>)}
+            
 
             
             

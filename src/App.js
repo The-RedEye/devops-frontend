@@ -24,6 +24,9 @@ const [events, setEvents] = useState([])
 const [loginCheck, setLoginCheck] = useState(false)
 const [allFeedback, setAllFeedback] = useState([])
 const [isAdmin, setIsAdmin] = useState(false)
+const [chartData, setChartData] = useState({})
+const [showThankYouModal, setShowThankYouModal] = useState(false)
+const [comments, setComments] = useState([])
 
 const url = Connection
 const datum = useContext(dataContext)
@@ -42,6 +45,9 @@ const [showLoginModal, setShowLoginModal] = useState(true)
         events, setEvents,
         allFeedback, setAllFeedback,
         isAdmin, setIsAdmin,
+        chartData, setChartData,
+        showThankYouModal, setShowThankYouModal,
+        comments, setComments
         // showLoginModal, setShowLoginModal,
         }}>
           
